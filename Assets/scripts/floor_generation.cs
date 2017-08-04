@@ -21,8 +21,6 @@ public class floor_generation : MonoBehaviour {
 				);
 			}
 		}
-		// Center floor
-		Camera.main.transform.position = new Vector3 (width / 2, height / 2, -10);
 	}
 
 	// Update is called once per frame

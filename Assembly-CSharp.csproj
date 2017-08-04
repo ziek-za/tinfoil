@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\camera_position.cs" />
+     <Compile Include="Assets\scripts\cull_rotation.cs" />
      <Compile Include="Assets\scripts\floor_generation.cs" />
      <Compile Include="Assets\scripts\player_movement.cs" />
  <Reference Include="UnityEngine.Analytics">
