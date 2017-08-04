@@ -1,2 +1,6 @@
 *Cache*
 *.log
+*metadata*
+*.meta
+*Database
+*Database*
