@@ -10,7 +10,7 @@ public class camera_position : MonoBehaviour {
 		int width = floor.width;
 		int height = floor.height;
 		// Center floor
-		Camera.main.transform.position = new Vector3 (width / 2, height / 2, -10);
+		Camera.main.transform.position = new Vector3 ((float)width / 2, (float)height / 2, -10);
 	}
 	
 	// Update is called once per frame
