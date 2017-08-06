@@ -45,6 +45,10 @@ public class player_movement : MonoBehaviour {
 			Application.LoadLevel (Application.loadedLevel);
 		}
 
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Application.Quit();
+		}
+
 		// SEPERATION OF CONCERNS LINE -----------
 		// Go away....
 		if (sliceCooldown > 0) {
