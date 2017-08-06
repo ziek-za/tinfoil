@@ -28,7 +28,8 @@ public class Spawning : MonoBehaviour {
 		height = floor.height;
 		speed_min = 0.4f;
 		speed_max = speed_min;
-		Invoke ("StartGame", 10f);
+		Invoke ("StartGame", 15f);
+		Invoke ("FadeText", 13f);
 	}
 	
 	// Update is called once per frame
@@ -58,20 +59,23 @@ public class Spawning : MonoBehaviour {
 
 				difficulty_counter = 0;
 			}
-		} else {
-			introScreen.Translate (Vector2.up * Time.deltaTime * 2);
-//			Color alpha = splashText.material.color;
-//			alpha.a = 0;
-//			splashText.material.color = Color.Lerp (splashText.material.color, alpha, 10 * Time.deltaTime);
-//
-//			alpha = splashImage.material.color;
-//			alpha.a = 0;
-//			splashImage.material.color = Color.Lerp (splashImage.material.color, alpha, 10 * Time.deltaTime);
+		} 
+	}
+
+	void FadeText(){
+		Image[] images = introScreen.GetComponentsInChildren<Image> ();
+		for (int i = 0; i < images.Length; i++){
+			images[i].CrossFadeAlpha (0, 2, false);
 		}
+
+		Text[] text = introScreen.GetComponentsInChildren<Text> ();
+		for (int i = 0; i < text.Length; i++){
+			text[i].CrossFadeAlpha (0, 2, false);
+		}
+
 	}
 
 	void StartGame(){
-		Debug.Log ("HERE");
 		levelStarted = true;
 	}
 
