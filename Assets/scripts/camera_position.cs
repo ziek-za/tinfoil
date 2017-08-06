@@ -10,7 +10,8 @@ public class camera_position : MonoBehaviour {
 		int width = floor.width;
 		int height = floor.height;
 		// Center floor
-		Camera.main.transform.position = new Vector3 ((float)width / 2, (float)height / 2, -10);
+		Camera.main.transform.position = new Vector3 ((float)width / 2, (float)height / 2 + 0.4f, -10);
+		Camera.main.GetComponent<camera_shake> ().SetPosition();
 	}
 	
 	// Update is called once per frame

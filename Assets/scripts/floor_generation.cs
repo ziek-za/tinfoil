@@ -14,7 +14,7 @@ public class floor_generation : MonoBehaviour {
 		for (int x = 0; x < width; x++) {
 			for (int y = 0; y < height; y++) {
 				GameObject.Instantiate (
-					floor_prefabs[Random.Range(0,(floor_prefabs.Length - 1))],
+					floor_prefabs[Random.Range(0,(floor_prefabs.Length))],
 					new Vector3(x, y, 10),
 					Quaternion.identity,
 					this.transform
